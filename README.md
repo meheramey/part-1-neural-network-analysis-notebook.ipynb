@@ -1,5 +1,6 @@
-#Student Name:-Amey Banarase
-#Student ID:-bitsom_ba_2511968
+# Student Name:-Amey Banarase
+# Student ID:-bitsom_ba_2511968
+
 # Part 1: Neural Network Fundamentals and Training Behavior Analysis
 
 ## Project Overview
