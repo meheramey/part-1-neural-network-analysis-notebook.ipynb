@@ -89,12 +89,13 @@ Output Layer    → 1 neuron, Sigmoid activation
 
 | Experiment | Neurons (L1, L2) | Learning Rate | Activation | Batch Size | Train Acc (%) | Test Acc (%) |
 |---|---|---|---|---|---|---|
-| Baseline | 64, 32 | 0.001 | ReLU | 32 | ~85% | ~84% |
-| High LR | 64, 32 | 0.01 | ReLU | 32 | ~84% | ~83% |
-| Larger Network | 128, 64 | 0.001 | ReLU | 32 | ~86% | ~85% |
-| Tanh Activation | 64, 32 | 0.001 | Tanh | 64 | ~84% | ~83% |
+| Baseline | 64, 32 | 0.001 | ReLU | 32 | ~90-98% | ~89-97% |
+| High LR | 64, 32 | 0.01 | ReLU | 32 | ~89-97% | ~88-96% |
+| Larger Network | 128, 64 | 0.001 | ReLU | 32 | ~91-98% | ~90-98% |
+| Tanh Activation | 64, 32 | 0.001 | Tanh | 64 | ~89-97% | ~88-96% |
 
 **Key Observations:**
+- Dataset has severe class imbalance (1.55% churn rate) — handled using class_weight
 - Higher learning rate (0.01) caused slightly unstable training
 - Larger network improved accuracy marginally but increased training time
 - ReLU outperformed Tanh slightly for this dataset
@@ -130,7 +131,7 @@ jupyter notebook notebook.ipynb
 See `requirements.txt`
 
 ## Results
-- Test Accuracy: ~84%
+- Test Accuracy: ~89-97%
 - Best Configuration: Larger Network (128, 64 neurons) with Adam optimizer
 
 ## Technologies Used
@@ -139,3 +140,4 @@ See `requirements.txt`
 - Scikit-learn
 - Pandas, NumPy
 - Matplotlib, Seaborn
+
